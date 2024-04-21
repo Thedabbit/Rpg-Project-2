@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://coi0v17xgs0l4" path="res://image4.jpeg" id="5_bnfjl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80iri"]
-size = Vector2(304, 280)
+size = Vector2(307, 283)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ciku"]
 size = Vector2(230.969, 283.125)
@@ -53,7 +53,7 @@ script = ExtResource("2_f65lu")
 texture = ExtResource("3_mmaeq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1"]
-position = Vector2(0, -14)
+position = Vector2(-1.5, -15.5)
 shape = SubResource("RectangleShape2D_80iri")
 
 [node name="Player 2" type="CharacterBody2D" parent="."]
@@ -65,7 +65,7 @@ rotation = 1.5708
 texture = ExtResource("5_bnfjl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player 2"]
-position = Vector2(0.515625, -18.5625)
+position = Vector2(1, -19)
 shape = SubResource("RectangleShape2D_8ciku")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -177,3 +177,6 @@ texture = SubResource("CanvasTexture_bsowc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
 position = Vector2(28.0001, 288.5)
 shape = SubResource("RectangleShape2D_4rgix")
+
+[node name="test sprite" type="CharacterBody2D" parent="."]
+position = Vector2(1478, 1622)

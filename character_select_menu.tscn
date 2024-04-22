@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cjkfmooamjprc"]
+
+[node name="Character select menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 589.0
+offset_top = -353.0
+offset_right = 838.0
+offset_bottom = -51.9999
+grow_vertical = 2
+scale = Vector2(4.56, 3.56)
+
+[node name="Soldier" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Soldier"
+
+[node name="Wizard" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Wizard"

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://main_level.gd" id="1_xq160"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_f65lu"]
-[ext_resource type="Texture2D" uid="uid://cm45c0yqsey6m" path="res://image1.jpeg" id="3_mmaeq"]
 [ext_resource type="Script" path="res://CharacterBody2D2.gd" id="3_ovpcs"]
-[ext_resource type="Texture2D" uid="uid://coi0v17xgs0l4" path="res://image4.jpeg" id="5_bnfjl"]
+[ext_resource type="Texture2D" uid="uid://cygqrkdslgcbt" path="res://image1-removebg-preview.png" id="3_xeddc"]
+[ext_resource type="Texture2D" uid="uid://ckv4f1esnmmx1" path="res://image0-removebg-preview.png" id="5_q2kw6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80iri"]
 size = Vector2(307, 283)
@@ -50,7 +50,8 @@ position = Vector2(780, 1619)
 script = ExtResource("2_f65lu")
 
 [node name="Icon" type="Sprite2D" parent="Player 1"]
-texture = ExtResource("3_mmaeq")
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("3_xeddc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1"]
 position = Vector2(-1.5, -15.5)
@@ -61,11 +62,13 @@ position = Vector2(1478, 1622)
 script = ExtResource("3_ovpcs")
 
 [node name="Icon" type="Sprite2D" parent="Player 2"]
-rotation = 1.5708
-texture = ExtResource("5_bnfjl")
+modulate = Color(0, 0, 0, 1)
+rotation = -0.011192
+texture = ExtResource("5_q2kw6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player 2"]
 position = Vector2(1, -19)
+rotation = 0.000714619
 shape = SubResource("RectangleShape2D_8ciku")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

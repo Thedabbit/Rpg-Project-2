@@ -212,3 +212,5 @@ texture = SubResource("CanvasTexture_bsowc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 10"]
 position = Vector2(30, 152)
 shape = SubResource("RectangleShape2D_1okwh")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]

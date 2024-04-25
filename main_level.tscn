@@ -94,6 +94,7 @@ position = Vector2(-9, 0)
 texture = SubResource("CanvasTexture_e1c61")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 2"]
+position = Vector2(1120, 1213)
 shape = SubResource("RectangleShape2D_2g8nw")
 
 [node name="Starting room wall 3" type="StaticBody2D" parent="."]

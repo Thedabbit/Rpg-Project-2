@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 [gd_scene load_steps=18 format=3 uid="uid://516gqlocb1b"]
-=======
-[gd_scene load_steps=20 format=3 uid="uid://516gqlocb1b"]
->>>>>>> 1d6812f79fbc8d57485d825b9a4d76dacb9a2f2f
 
 [ext_resource type="Script" path="res://main_level.gd" id="1_xq160"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_f65lu"]
@@ -41,8 +37,6 @@ size = Vector2(50.0001, 561)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1okwh"]
 size = Vector2(50, 311)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_jh8na"]
 
 [node name="Main level" type="Node2D"]
 script = ExtResource("1_xq160")
@@ -215,8 +209,3 @@ position = Vector2(30, 152)
 shape = SubResource("RectangleShape2D_1okwh")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1241.25, 520.25)
-scale = Vector2(967.5, 509.5)
-texture = SubResource("CanvasTexture_jh8na")

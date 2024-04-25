@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://516gqlocb1b"]
+[gd_scene load_steps=19 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://main_level.gd" id="1_xq160"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_f65lu"]
 [ext_resource type="Script" path="res://CharacterBody2D2.gd" id="3_ovpcs"]
 [ext_resource type="Texture2D" uid="uid://cygqrkdslgcbt" path="res://image1-removebg-preview.png" id="3_xeddc"]
+[ext_resource type="PackedScene" uid="uid://cxupketlgjvyv" path="res://Swordsman.tscn" id="5_nuhqg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80iri"]
 size = Vector2(282, 224)
@@ -151,9 +152,6 @@ texture = SubResource("CanvasTexture_bsowc")
 position = Vector2(28.0001, 288.5)
 shape = SubResource("RectangleShape2D_4rgix")
 
-[node name="test sprite" type="CharacterBody2D" parent="."]
-position = Vector2(1478, 1622)
-
 [node name="Starting room exit wall" type="StaticBody2D" parent="."]
 position = Vector2(874, 1035)
 
@@ -209,3 +207,5 @@ position = Vector2(30, 152)
 shape = SubResource("RectangleShape2D_1okwh")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="Swordsman" parent="." instance=ExtResource("5_nuhqg")]

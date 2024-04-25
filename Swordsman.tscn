@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxupketlgjvyv"]
+
+[ext_resource type="Script" path="res://Swordsman.gd" id="1_ekksw"]
+[ext_resource type="Texture2D" uid="uid://coi0v17xgs0l4" path="res://image4.jpeg" id="1_xiksw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp1bu"]
+size = Vector2(806, 1081)
+
+[node name="Swordsman" type="CharacterBody2D"]
+script = ExtResource("1_ekksw")
+
+[node name="Swordsman" type="Sprite2D" parent="."]
+position = Vector2(680, 726)
+rotation = 1.5708
+scale = Vector2(3.3625, 3.4)
+texture = ExtResource("1_xiksw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(678, 725.5)
+shape = SubResource("RectangleShape2D_tp1bu")

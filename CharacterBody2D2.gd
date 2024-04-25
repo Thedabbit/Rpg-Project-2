@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+var bullet_scene = preload("res://Bullet.tscn")
 var speed = 1000
 
 
@@ -18,3 +18,12 @@ func _process(delta):
 		rotation_degrees -= 5
 	if Input.is_action_pressed("RotateR2"):
 		rotation_degrees += 5
+	if Input.is_action_just_pressed("Primary Action"):
+		shoot_bullet()
+	
+func shoot_bullet():
+	var bullet = bullet_scene.instantiate() 
+	bullet.position = $Marker2D.global_position
+	$"..".add_child(bullet)
+	bullet.direction = Vector2.from_angle(rotation)
+	bullet.rotation_degrees = rotation_degrees + 90

@@ -33,8 +33,5 @@ polygon = PackedVector2Array(112, -43.0004, 143, -58.0005, 116, -75.0004, 63.999
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
-script = ExtResource("1_06xrc")
-
-[node name="Can Shoot" type="Timer" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

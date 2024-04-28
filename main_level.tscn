@@ -1,18 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://516gqlocb1b"]
+[gd_scene load_steps=17 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://main_level.gd" id="1_xq160"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_f65lu"]
-[ext_resource type="Script" path="res://CharacterBody2D2.gd" id="3_ovpcs"]
 [ext_resource type="Texture2D" uid="uid://cygqrkdslgcbt" path="res://image1-removebg-preview.png" id="3_xeddc"]
+[ext_resource type="PackedScene" uid="uid://b1r0n0sc2mn2f" path="res://player_2.tscn" id="5_6ka54"]
 [ext_resource type="PackedScene" uid="uid://cxupketlgjvyv" path="res://Swordsman.tscn" id="5_nuhqg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80iri"]
 size = Vector2(282, 224)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ciku"]
-size = Vector2(140.534, 142.805)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_jf6dx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6n420"]
 size = Vector2(159.879, 44.2114)
@@ -54,30 +49,6 @@ texture = ExtResource("3_xeddc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1"]
 position = Vector2(-14, -36)
 shape = SubResource("RectangleShape2D_80iri")
-
-[node name="Player 2" type="CharacterBody2D" parent="."]
-position = Vector2(1403, 1551)
-rotation = 1.5708
-script = ExtResource("3_ovpcs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 2"]
-rotation = 0.000714619
-shape = SubResource("RectangleShape2D_8ciku")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player 2"]
-modulate = Color(0.47451, 1, 1, 1)
-scale = Vector2(139, 147)
-texture = SubResource("CanvasTexture_jf6dx")
-
-[node name="Polygon2D" type="Polygon2D" parent="Player 2"]
-position = Vector2(24.9998, -76.0001)
-rotation = 1.5708
-color = Color(0.0338533, 0.0338533, 0.0338533, 1)
-polygon = PackedVector2Array(4, -9, 2, -90, 20, -117, 33, -92, 33, -7)
-
-[node name="Marker2D" type="Marker2D" parent="Player 2"]
-position = Vector2(112, -51.0004)
-rotation = 3.14159
 
 [node name="Starting Room wall 1" type="StaticBody2D" parent="."]
 position = Vector2(1799, 1810)
@@ -216,3 +187,6 @@ shape = SubResource("RectangleShape2D_1okwh")
 
 [node name="Swordsman" parent="." instance=ExtResource("5_nuhqg")]
 position = Vector2(1312, -276)
+
+[node name="Player 2" parent="." instance=ExtResource("5_6ka54")]
+position = Vector2(1407, 1589)

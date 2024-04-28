@@ -8,4 +8,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Global.selection == 1:
+		$"Player 1".queue_free()
+
+
+func _on_character_select_menu_soldier_chosen():
+	print("hello")
+	print(get_tree())
+	get_tree().change_scene_to_file("res://main_level.tscn") # Replace with function body.
+	print(get_tree())

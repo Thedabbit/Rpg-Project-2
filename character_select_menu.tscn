@@ -34,3 +34,4 @@ layout_mode = 2
 text = "Wizard"
 
 [connection signal="pressed" from="VBoxContainer/Soldier" to="." method="_on_soldier_pressed"]
+[connection signal="pressed" from="VBoxContainer/Wizard" to="." method="_on_wizard_pressed"]

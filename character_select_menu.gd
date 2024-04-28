@@ -13,5 +13,8 @@ func _process(delta):
 
 
 func _on_soldier_pressed():
-	Global.selection = 1
-	get_tree().change_scene_to_file("res://main_level.tscn")
+	Global.selection_soldier = 1
+	get_tree().change_scene_to_file("main_level.tscn")
+func _on_wizard_pressed():
+	Global.selection_wizard = 1
+	get_tree().change_scene_to_file("main_level.tscn")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://516gqlocb1b"]
+[gd_scene load_steps=14 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://main_level.gd" id="1_xq160"]
-[ext_resource type="Script" path="res://player_2.gd" id="3_yhw64"]
-[ext_resource type="PackedScene" uid="uid://b1r0n0sc2mn2f" path="res://player_2.tscn" id="5_6ka54"]
+[ext_resource type="Script" path="res://player_1.gd" id="3_yhw64"]
+[ext_resource type="PackedScene" uid="uid://c8tehoi8iyi5i" path="res://player_2.tscn" id="4_ccqy1"]
+[ext_resource type="PackedScene" uid="uid://b1r0n0sc2mn2f" path="res://player_1.tscn" id="5_6ka54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6n420"]
 size = Vector2(159.879, 44.2114)
@@ -160,9 +161,9 @@ shape = SubResource("RectangleShape2D_1okwh")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 
-[node name="Player 1" parent="." instance=ExtResource("5_6ka54")]
-position = Vector2(1406, 1578)
-
 [node name="Player 2" parent="." instance=ExtResource("5_6ka54")]
 position = Vector2(784, 1585)
 script = ExtResource("3_yhw64")
+
+[node name="Player 1" parent="." instance=ExtResource("4_ccqy1")]
+position = Vector2(1498, 1563)

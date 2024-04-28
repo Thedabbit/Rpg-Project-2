@@ -1,5 +1,5 @@
 extends CharacterBody2D 
-var bullet_scene = preload("res://Bullet.tscn")
+var bullet_scene = preload("res://Fireball.tscn")
 var speed = 1000
 var can_shoot = true
 # Called when the node enters the scene tree for the first time.
@@ -25,11 +25,11 @@ func _process(delta):
 	
 	
 func shoot_bullet():
-	var bullet = bullet_scene.instantiate() 
-	bullet.position = $Marker2D2.global_position
-	$"..".add_child(bullet)
-	bullet.direction = Vector2.from_angle(rotation)
-	bullet.rotation_degrees = rotation_degrees + 90
+	var fireball = bullet_scene.instantiate() 
+	fireball.position = $Marker2D2.global_position
+	$"..".add_child(fireball)
+	fireball.direction = Vector2.from_angle(rotation)
+	fireball.rotation_degrees = rotation_degrees + 90
 
 
 func _on_timer_timeout():

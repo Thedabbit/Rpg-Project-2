@@ -24,11 +24,13 @@ scale = Vector2(137.772, 148.945)
 texture = SubResource("CanvasTexture_86nxr")
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(111, -51.0004)
+position = Vector2(90.9998, -53.0003)
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(112, -43.0004, 143, -58.0005, 116, -75.0004, 63.9997, -74.0002, 33.9997, -74.0001, 34.9998, -45.0001)
+position = Vector2(-17.0001, -19.9999)
+scale = Vector2(1, 0.566236)
+color = Color(0.442351, 0.243665, 8.37597e-08, 1)
+polygon = PackedVector2Array(112, -43.0004, 118, -58.0004, 116, -75.0004, 63.9997, -74.0002, 33.9997, -74.0001, 34.9998, -45.0001)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

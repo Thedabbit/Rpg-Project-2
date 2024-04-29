@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cjkfmooamjprc"]
+[gd_scene load_steps=2 format=3 uid="uid://cjkfmooamjprc"]
+
+[ext_resource type="Script" path="res://character_select_menu.gd" id="1_qqage"]
 
 [node name="Character select menu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qqage")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1
@@ -29,3 +32,6 @@ text = "Soldier"
 [node name="Wizard" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Wizard"
+
+[connection signal="pressed" from="VBoxContainer/Soldier" to="." method="_on_soldier_pressed"]
+[connection signal="pressed" from="VBoxContainer/Wizard" to="." method="_on_wizard_pressed"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1r0n0sc2mn2f"]
+
+[ext_resource type="Script" path="res://CharacterBody2D2.gd" id="1_06xrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bo0q"]
+size = Vector2(139, 147)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_86nxr"]
+
+[node name="Player 2" type="CharacterBody2D"]
+z_index = 3
+position = Vector2(70, 70)
+rotation = 1.5708
+script = ExtResource("1_06xrc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.499863, -0.500175)
+shape = SubResource("RectangleShape2D_2bo0q")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1.52783e-06, 0.615124, 0.616666, 1)
+position = Vector2(0.338543, -0.50782)
+scale = Vector2(137.772, 148.945)
+texture = SubResource("CanvasTexture_86nxr")
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(111, -51.0004)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(112, -43.0004, 143, -58.0005, 116, -75.0004, 63.9997, -74.0002, 33.9997, -74.0001, 34.9998, -45.0001)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

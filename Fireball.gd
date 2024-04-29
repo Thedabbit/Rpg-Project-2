@@ -1,6 +1,7 @@
-extends Node2D
+extends Area2D
+var direction = Vector2(0, 0)
 
-
+@export var speed = 0.1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -8,9 +9,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.selection_wizard == 1:
-		Global.selection_wizard = 0
-		$"Player 2".queue_free()
-	if Global.selection_soldier == 1:
-		Global.selection_soldier = 0
-		$"Player 1".queue_free()
+	position += direction * speed
+	speed += 0.4

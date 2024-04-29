@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	if Global.selection_wizard == 1:
 		Global.selection_wizard = 0
-		$"Player 2".queue_free()
+		$"Player 1".queue_free()
 	if Global.selection_soldier == 1:
 		Global.selection_soldier = 0
-		$"Player 1".queue_free()
+		$"Player 2".queue_free()

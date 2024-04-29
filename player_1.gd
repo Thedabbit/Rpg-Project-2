@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var direction = Input.get_vector("Left1", "Right1", "Up1", "Down2")
+	var direction = Input.get_vector("Left1", "Right1", "Up1", "Down")
 	velocity = direction * speed
 	move_and_slide()
 	

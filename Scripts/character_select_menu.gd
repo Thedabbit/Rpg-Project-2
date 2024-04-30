@@ -13,8 +13,10 @@ func _process(delta):
 
 
 func _on_soldier_pressed():
+	Global.player_class = "soldier"
 	Global.selection_soldier = 1
-	get_tree().change_scene_to_file("main_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_level.tscn")
 func _on_wizard_pressed():
+	Global.player_class = "wizard"
 	Global.selection_wizard = 1
-	get_tree().change_scene_to_file("main_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_level.tscn")

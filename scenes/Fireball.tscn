@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp3n8fjtp28o5"]
+
+[ext_resource type="Script" path="res://Scripts/Fireball.gd" id="1_jupyv"]
+[ext_resource type="Texture2D" uid="uid://b4gl7nlq4fbkx" path="res://sprites/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjcyMi0wNTctcC5wbmc.png-removebg-preview.png" id="2_4dcb2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6vysv"]
+radius = 31.0
+height = 214.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_waucn"]
+radius = 36.0
+height = 72.0
+
+[node name="Fireball" type="Area2D"]
+script = ExtResource("1_jupyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_6vysv")
+
+[node name="CHJpdmF0zs9Sci9PbWFnZxMvd2Vic2l0zs8yMdIyLta0l2PvYjcyMi0wNTctcC5Wbmc_png-removebg-preview" type="Sprite2D" parent="."]
+rotation = 1.78422
+scale = Vector2(0.356261, 0.346326)
+texture = ExtResource("2_4dcb2")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, -84)
+shape = SubResource("CapsuleShape2D_waucn")
+
+[node name="Attack_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="timeout" from="Attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

@@ -1,5 +1,5 @@
 extends CharacterBody2D 
-var bullet_scene = preload("res://Fireball.tscn")
+var bullet_scene = preload("res://scenes/Fireball.tscn")
 var speed = 1000
 var can_shoot = true
 var enemy_inattack_range = false
@@ -22,7 +22,7 @@ func _process(delta):
 	if health <= 0:
 		player_alive = false
 	if player_alive == false:
-		get_tree().change_scene_to_file("game_over.tscn")
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	if Input.is_action_pressed("RotateL2"):
 		rotation_degrees -= 5
 	if Input.is_action_pressed("RotateR2"):
@@ -33,7 +33,7 @@ func _process(delta):
 		shoot_bullet()
 		
 func _physics_process(delta):
-	enemy_attack(	)
+	enemy_attack()
 	
 func shoot_bullet():
 	var fireball = bullet_scene.instantiate() 
@@ -53,7 +53,7 @@ func enemy_attack():
 		health = health - 20
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print(health)
+		print("player health = ", health)
 		
 		
 

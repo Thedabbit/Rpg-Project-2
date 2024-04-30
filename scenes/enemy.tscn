@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs2ippve8smpi"]
+[gd_scene load_steps=7 format=3 uid="uid://cs2ippve8smpi"]
 
-[ext_resource type="Script" path="res://Enemy.gd" id="1_agedl"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_agedl"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3gbof"]
 
@@ -12,6 +12,9 @@ radius = 692.059
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tidhy"]
 radius = 95.0053
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wg88"]
+size = Vector2(121, 110)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_agedl")
@@ -32,11 +35,23 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_h7xav")
 
 [node name="Enemy Hitbox" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Hitbox"]
 shape = SubResource("CircleShape2D_tidhy")
+
+[node name="can_take_damage" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_3wg88")
 
 [connection signal="body_entered" from="Detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="Detection area" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="Enemy Hitbox" to="." method="_on_damagehitbox_hurtbox_body_entered"]
 [connection signal="body_exited" from="Enemy Hitbox" to="." method="_on_damagehitbox_hurtbox_body_exited"]
+[connection signal="timeout" from="can_take_damage" to="." method="_on_can_take_damage_timeout"]

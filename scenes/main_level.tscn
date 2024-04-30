@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://516gqlocb1b"]
 
-[ext_resource type="Script" path="res://main_level.gd" id="1_xq160"]
-[ext_resource type="Script" path="res://player_1.gd" id="3_yhw64"]
-[ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://player_2.tscn" id="4_ccqy1"]
-[ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://player_1.tscn" id="5_6ka54"]
-[ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://enemy.tscn" id="5_whhim"]
+[ext_resource type="Script" path="res://Scripts/main_level.gd" id="1_xq160"]
+[ext_resource type="Script" path="res://Scripts/player_1.gd" id="3_yhw64"]
+[ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
+[ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
+[ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6n420"]
 size = Vector2(159.879, 44.2114)
@@ -44,7 +44,8 @@ shape = SubResource("RectangleShape2D_6n420")
 [node name="Sprite2D" type="Sprite2D" parent="Starting Room wall 1"]
 modulate = Color(0.498075, 0.478733, 0.478734, 1)
 position = Vector2(-70.8378, -12.3024)
-scale = Vector2(-159.839, -50.476)
+rotation = -3.14159
+scale = Vector2(159.839, 50.476)
 texture = SubResource("CanvasTexture_uv417")
 
 [node name="Starting room wall 3" type="StaticBody2D" parent="."]

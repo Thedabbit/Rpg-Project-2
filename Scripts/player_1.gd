@@ -1,5 +1,5 @@
 extends CharacterBody2D 
-var bullet_scene = preload("res://Bullet.tscn")
+var bullet_scene = preload("res://scenes/Bullet.tscn")
 var speed = 1000
 var can_shoot = true
 # Called when the node enters the scene tree for the first time.
@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var direction = Input.get_vector("Left1", "Right1", "Up1", "Down")
+	var direction = Input.get_vector("Left1", "Right1", "Up1", "Down1")
 	velocity = direction * speed
 	move_and_slide()
 	

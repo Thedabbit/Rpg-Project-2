@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cjkfmooamjprc"]
 
-[ext_resource type="Script" path="res://character_select_menu.gd" id="1_qqage"]
+[ext_resource type="Script" path="res://Scripts/character_select_menu.gd" id="1_q1eho"]
 
 [node name="Character select menu" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ offset_right = -24.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qqage")
+script = ExtResource("1_q1eho")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1

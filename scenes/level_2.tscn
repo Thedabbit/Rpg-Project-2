@@ -1,11 +1,109 @@
-[gd_scene load_steps=3 format=3 uid="uid://cislpk81mgcxa"]
+[gd_scene load_steps=10 format=3 uid="uid://cislpk81mgcxa"]
 
-[ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="1_c80v7"]
-[ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="2_xbkix"]
+[ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="1_womjg"]
+[ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="2_qvr3g"]
+[ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="3_mmhpn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6w1fj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kiums"]
+size = Vector2(53, 728)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htj6c"]
+size = Vector2(46, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pislk"]
+size = Vector2(56.0002, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1ylf"]
+size = Vector2(54, 866)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lt7td"]
+size = Vector2(49.9996, 853)
 
 [node name="Level 2" type="Node2D"]
 
-[node name="Player 1" parent="." instance=ExtResource("1_c80v7")]
+[node name="wall1" type="StaticBody2D" parent="."]
+position = Vector2(532, 466)
 
-[node name="Player 2" parent="." instance=ExtResource("2_xbkix")]
+[node name="Sprite2D" type="Sprite2D" parent="wall1"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-65.875, -108.5)
+scale = Vector2(51.75, 709)
+texture = SubResource("CanvasTexture_6w1fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall1"]
+position = Vector2(-65, -91)
+shape = SubResource("RectangleShape2D_kiums")
+
+[node name="wall4" type="StaticBody2D" parent="."]
+position = Vector2(956, 1551)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall4"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-65.875, -300)
+scale = Vector2(51.75, 326)
+texture = SubResource("CanvasTexture_6w1fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
+position = Vector2(-64, -300)
+shape = SubResource("RectangleShape2D_htj6c")
+
+[node name="Player 1" parent="." instance=ExtResource("1_womjg")]
+
+[node name="Player 2" parent="." instance=ExtResource("2_qvr3g")]
 position = Vector2(316, 66)
+
+[node name="wall2" type="StaticBody2D" parent="."]
+position = Vector2(686, 794)
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="wall2"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-65.875, -108.75)
+scale = Vector2(51.75, 709.5)
+texture = SubResource("CanvasTexture_6w1fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
+position = Vector2(-59, -127)
+shape = SubResource("RectangleShape2D_pislk")
+
+[node name="wall3" type="StaticBody2D" parent="."]
+position = Vector2(244, 1176)
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="wall3"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-65.875, -191.75)
+scale = Vector2(51.75, 875.5)
+texture = SubResource("CanvasTexture_6w1fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
+position = Vector2(-64, -191)
+shape = SubResource("RectangleShape2D_r1ylf")
+
+[node name="wall5" type="StaticBody2D" parent="."]
+position = Vector2(2008, 1311)
+rotation = -6.28319
+
+[node name="Sprite2D" type="Sprite2D" parent="wall5"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-65.875, -191.75)
+scale = Vector2(51.75, 875.5)
+texture = SubResource("CanvasTexture_6w1fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall5"]
+position = Vector2(-63.9999, -191.5)
+shape = SubResource("RectangleShape2D_lt7td")
+
+[node name="Enemy" parent="." instance=ExtResource("3_mmhpn")]
+position = Vector2(287, 1504)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_mmhpn")]
+position = Vector2(2314, 366)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_mmhpn")]
+position = Vector2(2506, 1516)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_mmhpn")]
+position = Vector2(1012, 326)

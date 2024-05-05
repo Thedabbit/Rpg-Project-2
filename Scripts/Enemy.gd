@@ -10,8 +10,10 @@ var can_take_damage = true
 func _ready():
 	if Global.player_class == "wizard":
 		damage = 20 
+		$can_take_damage.wait_time = 3
 	if Global.player_class == "soldier":
 		damage = 10
+		$can_take_damage.wait_time = 1
 func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true # Replace with function body.
@@ -58,7 +60,7 @@ func deal_with_damage():
 
 
 func _on_can_take_damage_timeout():
-	can_take_damage = true # Replace with function body.
+	can_take_damage = true 
 
 func on_hit():
 	health  = health - damage

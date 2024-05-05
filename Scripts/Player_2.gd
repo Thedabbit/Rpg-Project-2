@@ -4,7 +4,6 @@ var speed = 1000
 var can_shoot = true
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
-var health = 100
 var player_alive = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,7 +18,7 @@ func _process(delta):
 	move_and_slide()
 	
 	
-	if health <= 0:
+	if Global.health <= 0:
 		player_alive = false
 	if player_alive == false:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
@@ -50,10 +49,10 @@ func player():
 	pass
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown == true:
-		health = health - 20
+		Global.health = Global.health - 20
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print("player health = ", health)
+		print("player health = ", Global.health)
 		
 		
 
@@ -74,4 +73,4 @@ func _on_attack_cooldown_timeout():
 
 
 func _on_player_1_hitbox_body_entered(body):
-	pass # Replace with function body.
+	enemy_inattack_range = true # Replace with function body.

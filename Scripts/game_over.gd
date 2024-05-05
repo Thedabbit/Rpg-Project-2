@@ -6,4 +6,5 @@ func _on_button_pressed():
 
 
 func _on_quit_pressed():
+	Global.health = 100
 	get_tree().quit() # Replace with function body.

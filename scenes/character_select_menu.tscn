@@ -19,22 +19,27 @@ script = ExtResource("1_q1eho")
 z_index = 1
 z_as_relative = false
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1301.0
-offset_top = -110.0
-offset_right = 1550.0
-offset_bottom = 191.0
+offset_left = -124.5
+offset_top = -150.5
+offset_right = 124.5
+offset_bottom = 150.5
+grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4.56, 3.56)
 
 [node name="Soldier" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Soldier"
 
 [node name="Wizard" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Wizard"
 
 [connection signal="pressed" from="VBoxContainer/Soldier" to="." method="_on_soldier_pressed"]

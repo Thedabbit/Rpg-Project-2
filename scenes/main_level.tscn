@@ -1,22 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://516gqlocb1b"]
+[gd_scene load_steps=14 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://Scripts/main_level.gd" id="1_xq160"]
-[ext_resource type="Script" path="res://Scripts/player_1.gd" id="3_yhw64"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6n420"]
-size = Vector2(159.879, 44.2114)
-
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6n420"]
+size = Vector2(204.495, 44.2114)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mo1xj"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hx8ib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pucd"]
-size = Vector2(165.94, 32.8168)
+size = Vector2(205.947, 32.8168)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_bsowc"]
 
@@ -37,10 +36,6 @@ metadata/_edit_horizontal_guides_ = []
 position = Vector2(1799, 1810)
 scale = Vector2(9.32752, 1.64779)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Starting Room wall 1"]
-position = Vector2(-69.9396, -16.1274)
-shape = SubResource("RectangleShape2D_6n420")
-
 [node name="Sprite2D" type="Sprite2D" parent="Starting Room wall 1"]
 modulate = Color(0.498075, 0.478733, 0.478734, 1)
 position = Vector2(-70.8378, -12.3024)
@@ -48,20 +43,24 @@ rotation = -3.14159
 scale = Vector2(159.839, 50.476)
 texture = SubResource("CanvasTexture_uv417")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Starting Room wall 1"]
+position = Vector2(-69.9396, -16.1273)
+shape = SubResource("RectangleShape2D_6n420")
+
 [node name="Starting room wall 3" type="StaticBody2D" parent="."]
 position = Vector2(415, 1471)
 rotation = -1.5708
 scale = Vector2(2.35268, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 3"]
-position = Vector2(-70.9998, -3.21063)
-shape = SubResource("RectangleShape2D_6n420")
-
 [node name="Sprite2D" type="Sprite2D" parent="Starting room wall 3"]
 modulate = Color(0.498039, 0.478431, 0.478431, 1)
-position = Vector2(-48.3466, -4.72005)
+position = Vector2(-48.3467, -4.72006)
 scale = Vector2(206.448, 46.3127)
 texture = SubResource("CanvasTexture_mo1xj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 3"]
+position = Vector2(-48.6918, -3.21069)
+shape = SubResource("RectangleShape2D_6n420")
 
 [node name="Starting room wall 4" type="StaticBody2D" parent="."]
 position = Vector2(1871, 1366)
@@ -76,7 +75,7 @@ skew = 0.0200466
 texture = SubResource("CanvasTexture_hx8ib")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 4"]
-position = Vector2(-72.9696, -2.59155)
+position = Vector2(-92.9732, -2.59155)
 shape = SubResource("RectangleShape2D_1pucd")
 
 [node name="Starting room wall 7" type="StaticBody2D" parent="."]
@@ -167,14 +166,44 @@ shape = SubResource("RectangleShape2D_1okwh")
 z_index = 2
 position = Vector2(784, 1585)
 collision_layer = 2
-collision_mask = 2
-script = ExtResource("3_yhw64")
+collision_mask = 3
 
 [node name="Player 2" parent="." instance=ExtResource("4_ccqy1")]
 z_index = 2
 position = Vector2(1498, 1563)
 collision_layer = 2
-collision_mask = 2
+collision_mask = 3
 
 [node name="Enemy" parent="." instance=ExtResource("5_whhim")]
-position = Vector2(1135, 473)
+position = Vector2(845, 469)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_whhim")]
+position = Vector2(1437, 471)
+
+[node name="Starting room wall 11" type="StaticBody2D" parent="."]
+position = Vector2(1655, 1022)
+rotation = 3.14159
+
+[node name="Sprite2D" type="Sprite2D" parent="Starting room wall 11"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(30.5, 154.25)
+scale = Vector2(49, 309.5)
+texture = SubResource("CanvasTexture_bsowc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 11"]
+position = Vector2(30, 152)
+shape = SubResource("RectangleShape2D_1okwh")
+
+[node name="Starting room wall 12" type="StaticBody2D" parent="."]
+position = Vector2(623, 1027)
+rotation = 3.14159
+
+[node name="Sprite2D" type="Sprite2D" parent="Starting room wall 12"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(30.5, 154.25)
+scale = Vector2(49, 309.5)
+texture = SubResource("CanvasTexture_bsowc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Starting room wall 12"]
+position = Vector2(30, 152)
+shape = SubResource("RectangleShape2D_1okwh")

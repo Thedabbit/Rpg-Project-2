@@ -10,20 +10,14 @@ var can_take_damage = true
 func _ready():
 	if Global.player_class == "wizard":
 		damage = 20 
-
+	if Global.player_class == "soldier":
+		damage = 10
 func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true # Replace with function body.
 
 
 func _physics_process(delta):
-	if Global.enemy_hit == true:
-		if can_take_damage == true:
-			can_take_damage = false
-			health = health - damage
-			$can_take_damage.start()
-			Global.enemy_hit = false
-			print("slime health =", health)
 			
 	if health <= 0:
 		self.queue_free()
@@ -66,10 +60,10 @@ func deal_with_damage():
 func _on_can_take_damage_timeout():
 	can_take_damage = true # Replace with function body.
 
+func on_hit():
+	health  = health - damage
+	print("slime health =", health)
+	
 
-func _on_hurtbox_body_entered(body):
-	Global.enemy_hit = true # Replace with function body.
-
-
-func _on_hurtbox_body_exited(body):
-	Global.enemy_hit = false # Replace with function body.
+func _on_enemy_hitbox_body_entered(body):
+	pass # Replace with function body.

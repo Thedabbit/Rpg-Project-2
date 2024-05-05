@@ -52,6 +52,5 @@ shape = SubResource("RectangleShape2D_3wg88")
 
 [connection signal="body_entered" from="Detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="Detection area" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_entered" from="Enemy Hitbox" to="." method="_on_damagehitbox_hurtbox_body_entered"]
-[connection signal="body_exited" from="Enemy Hitbox" to="." method="_on_damagehitbox_hurtbox_body_exited"]
+[connection signal="body_entered" from="Enemy Hitbox" to="." method="_on_enemy_hitbox_body_entered"]
 [connection signal="timeout" from="can_take_damage" to="." method="_on_can_take_damage_timeout"]

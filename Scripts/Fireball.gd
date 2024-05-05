@@ -36,3 +36,8 @@ func _on_hitbox_body_exited(body):
 func _on_hitbox_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	Global.enemy_hit = true
 	self.queue_free() # Replace with function body.
+
+
+func _on_body_entered(body):
+	if "on_hit" in body:
+		body.on_hit()

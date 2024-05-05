@@ -71,3 +71,7 @@ func _on_player_2_hitbox_body_exited(body):
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true # Replace with function body.
+
+
+func _on_player_1_hitbox_body_entered(body):
+	pass # Replace with function body.

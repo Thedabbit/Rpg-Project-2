@@ -11,3 +11,10 @@ func _ready():
 func _process(delta):
 	position += direction * speed
 	speed += 0.01
+
+
+func _on_body_entered(body):
+	if "on_hit" in body:
+		body.on_hit()
+ # Replace with function body.
+

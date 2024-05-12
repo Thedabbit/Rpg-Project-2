@@ -46,7 +46,12 @@ shape = SubResource("CircleShape2D_oxx6b")
 
 [node name="attack_cooldown" type="Timer" parent="."]
 
+[node name="regin_timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Player 2 hitbox" to="." method="_on_player_2_hitbox_body_entered"]
 [connection signal="body_exited" from="Player 2 hitbox" to="." method="_on_player_2_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]

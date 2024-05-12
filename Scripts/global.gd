@@ -6,3 +6,4 @@ var player_current_attack = false
 var enemy_hit = false
 var player_class = null
 var health = 100
+var enemy_amount = 2

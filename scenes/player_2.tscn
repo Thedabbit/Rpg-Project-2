@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5v1vgofwrr07"]
+[gd_scene load_steps=6 format=3 uid="uid://c5v1vgofwrr07"]
 
 [ext_resource type="Script" path="res://Scripts/Player_2.gd" id="1_44o7n"]
+[ext_resource type="Texture2D" uid="uid://e3jwu5jssn3l" path="res://sprites/wizard-hat-creative-icon-design-free-vector-removebg-preview.png" id="2_fjp6d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bo0q"]
 size = Vector2(139, 147)
@@ -49,6 +50,12 @@ shape = SubResource("CircleShape2D_oxx6b")
 [node name="regin_timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="Wizard-hat-creative-icon-design-free-vector-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-130, 2.00049)
+rotation = -1.5708
+scale = Vector2(0.283902, 0.251043)
+texture = ExtResource("2_fjp6d")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Player 2 hitbox" to="." method="_on_player_2_hitbox_body_entered"]

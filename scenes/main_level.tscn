@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://516gqlocb1b"]
+[gd_scene load_steps=20 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://Scripts/main_level.gd" id="1_xq160"]
+[ext_resource type="PackedScene" uid="uid://2qtduav814ty" path="res://u_win.tscn" id="4_b8k03"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
 [ext_resource type="Script" path="res://scenes/door.gd" id="5_uewlg"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
+[ext_resource type="Script" path="res://scenes/door2.gd" id="6_t8gkr"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
 
@@ -401,13 +403,18 @@ shape = SubResource("RectangleShape2D_0rciu")
 
 [node name="door2" type="StaticBody2D" parent="."]
 position = Vector2(1598, 490)
+script = ExtResource("6_t8gkr")
 
 [node name="Sprite2D" type="Sprite2D" parent="door2"]
 modulate = Color(0.368627, 0.219608, 0.0313726, 1)
-position = Vector2(29.25, 107.25)
+position = Vector2(23.25, 107.25)
 scale = Vector2(59.5, 215.5)
 texture = SubResource("CanvasTexture_j6aou")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door2"]
 position = Vector2(27, 106.5)
 shape = SubResource("RectangleShape2D_sdemy")
+
+[node name="U win" parent="." instance=ExtResource("4_b8k03")]
+position = Vector2(1912, 590)
+rotation = 1.5708

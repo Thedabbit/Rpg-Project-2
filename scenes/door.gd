@@ -10,5 +10,4 @@ func _ready():
 func _process(delta):
 	if Global.enemy_amount == 1:
 		$".".queue_free()
-	elif Global.enemy_amount == 0:
-		$"../door2".queue_free()
+	

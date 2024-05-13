@@ -71,4 +71,5 @@ func _on_attack_cooldown_timeout():
 
 
 func _on_player_1_hitbox_body_entered(body):
-	enemy_inattack_range = true # Replace with function body.
+	if body.has_method("enemy"):
+		enemy_inattack_range = true # # Replace with function body.

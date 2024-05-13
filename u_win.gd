@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,10 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.selection_wizard == 1:
-		Global.selection_wizard = 0
-		$"Player 1".queue_free()
-	if Global.selection_soldier == 1:
-		Global.selection_soldier = 0
-		$"Player 2".queue_free()
-		 
+	pass
+
+
+func _on_body_entered(body):
+	get_tree().change_scene_to_file("res://level_2.tscn") # Replace with function body.

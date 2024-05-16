@@ -34,5 +34,6 @@ shape = SubResource("CapsuleShape2D_waucn")
 wait_time = 0.5
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="Attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

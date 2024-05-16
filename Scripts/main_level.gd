@@ -14,3 +14,4 @@ func _process(delta):
 	if Global.selection_soldier == 1:
 		Global.selection_soldier = 0
 		$"Player 2".queue_free()
+	if 

@@ -8,4 +8,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$MarginContainer/TextureProgressBar.value = Global.health
+	pass
+
+	pass # Replace with function body.
+========
+	if Global.enemy_amount == 1:
+		$".".queue_free()
+	elif Global.enemy_amount == 0:
+		$"../door2".queue_free()
+>>>>>>>> f86afc107d3de67f2e2097848a711078b3082a9c:scenes/door.gd

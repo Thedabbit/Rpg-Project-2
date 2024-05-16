@@ -23,9 +23,9 @@ func _process(delta):
 	if player_alive == false:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	if Input.is_action_pressed("RotateL2"):
-		rotation_degrees -= 3.5
+		rotation_degrees -= 5
 	if Input.is_action_pressed("RotateR2"):
-		rotation_degrees += 3.5
+		rotation_degrees += 5
 	if Input.is_action_just_pressed("Primary Action") and can_shoot == true:
 		can_shoot = false
 		$Timer.start()
@@ -73,22 +73,4 @@ func _on_attack_cooldown_timeout():
 
 
 func _on_player_1_hitbox_body_entered(body):
-	if body.has_method("enemy"):
-		enemy_inattack_range = true # Replace with function body.
-func update_health():
-	var healthbar = $healthbar
-	healthbar.value = Global.health
-	
-	if Global.health >= 100:
-		healthbar.visible = false
-	else:
-		healthbar.visible = true
-		
-func _on_regin_timer_timeout():
-	if Global.health < 100:
-		Global.health = Global.health + 20
-		Global.health = Global.health + 20
-		if Global.health > 100:
-			Global.health = 100 # Replace with function body.
-		if Global.health <= 0:
-			Global.health = 0
+	enemy_inattack_range = true # Replace with function body.

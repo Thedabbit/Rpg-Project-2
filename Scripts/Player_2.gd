@@ -72,9 +72,7 @@ func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true # Replace with function body.
 
 
-func _on_player_1_hitbox_body_entered(body):
-	if body.has_method("enemy"):
-		enemy_inattack_range = true # Replace with function body.
+ # Replace with function body.
 func update_health():
 	var healthbar = $healthbar
 	healthbar.value = Global.health

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://2qtduav814ty" path="res://u_win.tscn" id="4_b8k03"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
-[ext_resource type="Script" path="res://scenes/door.gd" id="5_uewlg"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="5_uewlg"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
 [ext_resource type="Script" path="res://scenes/door2.gd" id="6_t8gkr"]
 
@@ -187,6 +187,7 @@ collision_mask = 3
 
 [node name="Enemy" parent="." instance=ExtResource("5_whhim")]
 position = Vector2(845, 469)
+collision_mask = 3
 
 [node name="Enemy2" parent="." instance=ExtResource("5_whhim")]
 position = Vector2(4, 681)

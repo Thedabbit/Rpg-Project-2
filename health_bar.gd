@@ -8,11 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-<<<<<<<< HEAD:health_bar.gd
 	pass
 
-
-func _on_texture_progress_bar_value_changed(value):
 	pass # Replace with function body.
 ========
 	if Global.enemy_amount == 1:

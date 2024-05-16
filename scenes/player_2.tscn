@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5v1vgofwrr07"]
+[gd_scene load_steps=5 format=3 uid="uid://c5v1vgofwrr07"]
 
 [ext_resource type="Script" path="res://Scripts/Player_2.gd" id="1_44o7n"]
-[ext_resource type="PackedScene" uid="uid://b6yhktxcjdvdd" path="res://scenes/health_bar.tscn" id="2_105ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bo0q"]
 size = Vector2(139, 147)
@@ -50,13 +49,6 @@ shape = SubResource("CircleShape2D_oxx6b")
 [node name="regin_timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
-
-[node name="Health bar" parent="." instance=ExtResource("2_105ld")]
-offset_left = -116.0
-offset_top = -8.99958
-offset_right = -116.0
-offset_bottom = -8.99958
-rotation = 1.5743
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Player 2 hitbox" to="." method="_on_player_2_hitbox_body_entered"]

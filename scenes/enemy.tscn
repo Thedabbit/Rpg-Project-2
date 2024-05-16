@@ -14,7 +14,7 @@ radius = 692.059
 radius = 95.0053
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3wg88"]
-size = Vector2(237, 208)
+size = Vector2(135, 131)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_agedl")
@@ -47,9 +47,9 @@ wait_time = 2.0
 [node name="hurtbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_3wg88")
 
 [connection signal="body_entered" from="Detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="Detection area" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_entered" from="Enemy Hitbox" to="." method="_on_enemy_hitbox_body_entered"]
 [connection signal="timeout" from="can_take_damage" to="." method="_on_can_take_damage_timeout"]

@@ -22,6 +22,7 @@ func _on_detection_area_body_entered(body):
 func _physics_process(delta):
 			
 	if health <= 0:
+		Global.enemy_amount = Global.enemy_amount - 1
 		self.queue_free()
 	deal_with_damage()
 	

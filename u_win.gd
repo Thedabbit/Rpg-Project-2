@@ -10,5 +10,3 @@ func _ready():
 func _process(_delta):
 	pass
 
-func _on_body_entered(_body_entered):
-		get_tree().change_scene_to_file("res://scenes/level_2.tscn") # Replace with function body.

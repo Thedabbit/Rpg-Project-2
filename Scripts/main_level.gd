@@ -14,3 +14,7 @@ func _process(_delta):
 	if Global.selection_soldier == 1:
 		Global.selection_soldier = 0
 		$"Player 2".queue_free()
+
+
+func _on_level_1_win_body_entered(_body):
+	get_tree().change_scene_to_file("res://level_2.tscn")

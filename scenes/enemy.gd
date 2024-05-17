@@ -34,7 +34,7 @@ func _physics_process(delta):
 
 
 
-func _on_detection_area_body_exited(body):
+func _on_detection_area_body_exited(_body):
 	player = null
 	player_chase = false # Replace with function body.
 
@@ -68,5 +68,5 @@ func on_hit():
 	print("slime health =", health)
 	
 
-func _on_enemy_hitbox_body_entered(body):
+func _on_enemy_hitbox_body_entered(_body):
 	pass # Replace with function body.

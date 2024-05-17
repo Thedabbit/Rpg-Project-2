@@ -7,9 +7,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
-
-func _on_body_entered(body):
-	get_tree().change_scene_to_file("res://level_2.tscn") # Replace with function body.
+func _on_body_entered(_body_entered):
+		get_tree().change_scene_to_file("res://scenes/level_2.tscn") # Replace with function body.

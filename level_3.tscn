@@ -30,7 +30,6 @@ texture = SubResource("CanvasTexture_fdwt5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
 position = Vector2(-307.185, -394.739)
 rotation = -0.663225
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mlh2o")
 
 [node name="wall5" type="StaticBody2D" parent="."]
@@ -46,7 +45,6 @@ texture = SubResource("CanvasTexture_fdwt5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall5"]
 position = Vector2(-344, -421)
 rotation = -0.663225
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mlh2o")
 
 [node name="Enemy" parent="." instance=ExtResource("3_q6m7u")]

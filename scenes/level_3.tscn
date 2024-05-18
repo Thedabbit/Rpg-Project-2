@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpkcn78dpfvj4"]
+
+[ext_resource type="Script" path="res://scenes/level_3.gd" id="1_bqecu"]
+
+[node name="level 3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bqecu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 3174.0
+offset_bottom = 1729.0
+theme_override_font_sizes/normal_font_size = 500
+text = "You Win!
+Congrats"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1505, 908)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 811.0
+offset_top = 1393.0
+offset_right = 1672.0
+offset_bottom = 1606.0
+theme_override_font_sizes/font_size = 150
+text = "Play Again?"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

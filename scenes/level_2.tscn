@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cislpk81mgcxa"]
+[gd_scene load_steps=13 format=3 uid="uid://de2w3gt5nf0ep"]
 
+[ext_resource type="Script" path="res://Scripts/level_2.gd" id="1_0pj2b"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="1_womjg"]
+[ext_resource type="PackedScene" uid="uid://c8htodnuanvw" path="res://scenes/level_2_win.tscn" id="2_g5t4c"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="2_qvr3g"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="3_mmhpn"]
+[ext_resource type="Texture2D" uid="uid://dec8c6hce5pxx" path="res://sprites/image-removebg-preview.png" id="6_g47c8"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6w1fj"]
 
@@ -22,6 +25,10 @@ size = Vector2(54, 866)
 size = Vector2(49.9996, 853)
 
 [node name="Level 2" type="Node2D"]
+script = ExtResource("1_0pj2b")
+
+[node name="Level 1 win" parent="." instance=ExtResource("2_g5t4c")]
+position = Vector2(2689, 1562)
 
 [node name="wall1" type="StaticBody2D" parent="."]
 position = Vector2(532, 466)
@@ -50,9 +57,13 @@ position = Vector2(-64, -300)
 shape = SubResource("RectangleShape2D_htj6c")
 
 [node name="Player 1" parent="." instance=ExtResource("1_womjg")]
+collision_layer = 2
+collision_mask = 3
 
 [node name="Player 2" parent="." instance=ExtResource("2_qvr3g")]
 position = Vector2(316, 66)
+collision_layer = 2
+collision_mask = 3
 
 [node name="wall2" type="StaticBody2D" parent="."]
 position = Vector2(686, 794)
@@ -97,13 +108,67 @@ position = Vector2(-63.9999, -191.5)
 shape = SubResource("RectangleShape2D_lt7td")
 
 [node name="Enemy" parent="." instance=ExtResource("3_mmhpn")]
-position = Vector2(287, 1504)
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(956, 1454)
+collision_mask = 3
 
 [node name="Enemy2" parent="." instance=ExtResource("3_mmhpn")]
-position = Vector2(2314, 366)
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1348, 417)
+collision_mask = 3
 
 [node name="Enemy3" parent="." instance=ExtResource("3_mmhpn")]
-position = Vector2(2506, 1516)
+modulate = Color(0.839233, 0.198254, 0, 1)
+visibility_layer = 3
+position = Vector2(2372, 588)
+collision_layer = 2
+collision_mask = 3
 
 [node name="Enemy4" parent="." instance=ExtResource("3_mmhpn")]
-position = Vector2(1012, 326)
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1981, 1299)
+collision_mask = 3
+
+[node name="Enemy5" parent="." instance=ExtResource("3_mmhpn")]
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1570, 1633)
+collision_mask = 3
+
+[node name="Enemy6" parent="." instance=ExtResource("3_mmhpn")]
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1831, 819)
+collision_mask = 3
+
+[node name="Enemy7" parent="." instance=ExtResource("3_mmhpn")]
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1005, 1669)
+collision_mask = 3
+
+[node name="Enemy8" parent="." instance=ExtResource("3_mmhpn")]
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1353, 1638)
+collision_mask = 3
+
+[node name="Enemy9" parent="." instance=ExtResource("3_mmhpn")]
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(496, 1441)
+collision_mask = 3
+
+[node name="Enemy10" parent="." instance=ExtResource("3_mmhpn")]
+modulate = Color(0.839233, 0.198254, 0, 1)
+position = Vector2(1445, 833)
+collision_mask = 3
+
+[node name="Image-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(2789, 1626)
+texture = ExtResource("6_g47c8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 520.0
+offset_top = 274.0
+offset_right = 1134.0
+offset_bottom = 697.0
+theme_override_font_sizes/normal_font_size = 50
+text = "These red variants of the enemy's are invunurable from damage, run to the exit, theres no chance in fighting them"
+
+[connection signal="body_entered" from="Level 1 win" to="." method="_on_level_1_win_body_entered"]

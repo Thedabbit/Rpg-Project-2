@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://516gqlocb1b"]
+[gd_scene load_steps=21 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://Scripts/main_level.gd" id="1_xq160"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
-[ext_resource type="PackedScene" uid="uid://cr76hxa7rn27v" path="res://level_1_win.tscn" id="7_7uic6"]
+[ext_resource type="Texture2D" uid="uid://dec8c6hce5pxx" path="res://sprites/image-removebg-preview.png" id="6_5j582"]
+[ext_resource type="PackedScene" uid="uid://cr76hxa7rn27v" path="res://scenes/level_1_win.tscn" id="7_7uic6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
 
@@ -445,7 +446,20 @@ texture = SubResource("CanvasTexture_j6aou")
 position = Vector2(27, 106.5)
 shape = SubResource("RectangleShape2D_sdemy")
 
+[node name="Image-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(2154.25, 618.75)
+scale = Vector2(0.883136, 0.79142)
+texture = ExtResource("6_5j582")
+
 [node name="Level 1 win" parent="." instance=ExtResource("7_7uic6")]
-position = Vector2(1900, 609)
+position = Vector2(2155, 605)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1395.0
+offset_top = 1063.0
+offset_right = 2009.0
+offset_bottom = 1300.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Kill all the enemy's to open the doors and collect the trophy"
 
 [connection signal="body_entered" from="Level 1 win" to="." method="_on_level_1_win_body_entered"]

@@ -2,10 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/main_level.gd" id="1_xq160"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
-[ext_resource type="Script" path="res://scenes/door.gd" id="5_5q5oi"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
-[ext_resource type="Script" path="res://scenes/door2.gd" id="6_t8gkr"]
 [ext_resource type="PackedScene" uid="uid://cr76hxa7rn27v" path="res://level_1_win.tscn" id="7_7uic6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
@@ -31,10 +29,41 @@ size = Vector2(50.0001, 561)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1okwh"]
 size = Vector2(50, 311)
 
+[sub_resource type="GDScript" id="GDScript_4ke7h"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	if Global.enemy_amount == 1:
+		$\".\".queue_free()
+
+"
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_j6aou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rciu"]
 size = Vector2(64, 213)
+
+[sub_resource type="GDScript" id="GDScript_1lils"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Global.enemy_amount == 0:
+		$\".\".queue_free()
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdemy"]
 size = Vector2(74, 233)
@@ -390,7 +419,7 @@ shape = SubResource("RectangleShape2D_1okwh")
 
 [node name="door" type="StaticBody2D" parent="."]
 position = Vector2(562, 518)
-script = ExtResource("5_5q5oi")
+script = SubResource("GDScript_4ke7h")
 
 [node name="Sprite2D" type="Sprite2D" parent="door"]
 modulate = Color(0.368627, 0.219608, 0.0313726, 1)
@@ -404,7 +433,7 @@ shape = SubResource("RectangleShape2D_0rciu")
 
 [node name="door2" type="StaticBody2D" parent="."]
 position = Vector2(1598, 490)
-script = ExtResource("6_t8gkr")
+script = SubResource("GDScript_1lils")
 
 [node name="Sprite2D" type="Sprite2D" parent="door2"]
 modulate = Color(0.368627, 0.219608, 0.0313726, 1)

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dq4becgin4ht7"]
+
+[ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="1_m0qnf"]
+[ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="2_v4aig"]
+[ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="3_q6m7u"]
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="4_0ietj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fdwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlh2o"]
+size = Vector2(55, 464.902)
+
+[node name="level 3" type="Node2D"]
+
+[node name="Player 2" parent="." instance=ExtResource("1_m0qnf")]
+
+[node name="Player 1" parent="." instance=ExtResource("2_v4aig")]
+position = Vector2(288, 66)
+
+[node name="wall4" type="StaticBody2D" parent="."]
+position = Vector2(462, 779)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall4"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-329.596, -401.849)
+rotation = -0.680678
+scale = Vector2(44.0522, 463.834)
+texture = SubResource("CanvasTexture_fdwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
+position = Vector2(-307.185, -394.739)
+rotation = -0.663225
+shape = SubResource("RectangleShape2D_mlh2o")
+
+[node name="wall5" type="StaticBody2D" parent="."]
+position = Vector2(890, 609)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall5"]
+modulate = Color(0.498039, 0.478431, 0.478431, 1)
+position = Vector2(-345.693, -421.727)
+rotation = -0.680678
+scale = Vector2(44.0522, 412.677)
+texture = SubResource("CanvasTexture_fdwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall5"]
+position = Vector2(-344, -421)
+rotation = -0.663225
+shape = SubResource("RectangleShape2D_mlh2o")
+
+[node name="Enemy" parent="." instance=ExtResource("3_q6m7u")]
+position = Vector2(1681, 753)
+scale = Vector2(3, 3)
+collision_mask = 3
+script = ExtResource("4_0ietj")

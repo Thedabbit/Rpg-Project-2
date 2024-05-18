@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="5_uewlg"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
+[ext_resource type="Script" path="res://scenes/door2.gd" id="6_t8gkr"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
 
@@ -403,6 +404,10 @@ shape = SubResource("RectangleShape2D_0rciu")
 
 [node name="door2" type="StaticBody2D" parent="."]
 position = Vector2(1598, 490)
+<<<<<<< HEAD
+=======
+script = ExtResource("6_t8gkr")
+>>>>>>> parent of 3b8c391 (qwe)
 
 [node name="Sprite2D" type="Sprite2D" parent="door2"]
 modulate = Color(0.368627, 0.219608, 0.0313726, 1)

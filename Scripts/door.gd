@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,5 +11,9 @@ func _process(delta):
 	pass
 
 
-func _on_body_entered(body):
-	get_tree().change_scene_to_file("res://level_2.tscn") # Replace with function body.
+func _on_texture_progress_bar_value_changed(value):
+	if Global.enemy_amount == 1:
+		$".".queue_free()
+	if Global.enemy_amount == 0:
+		$"../door2".queue_free()
+

@@ -90,3 +90,5 @@ func _on_regin_timer_timeout():
 			Global.health = 100 # Replace with function body.
 		if Global.health <= 0:
 			Global.health = 0
+
+

@@ -1,11 +1,15 @@
 [gd_scene load_steps=20 format=3 uid="uid://516gqlocb1b"]
 
 [ext_resource type="Script" path="res://Scripts/main_level.gd" id="1_xq160"]
-[ext_resource type="PackedScene" uid="uid://bdmhfhm4g2fki" path="res://u_win.tscn" id="4_b8k03"]
 [ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="4_ccqy1"]
+[ext_resource type="Script" path="res://scenes/door.gd" id="5_5q5oi"]
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
-[ext_resource type="Script" path="res://Scripts/door.gd" id="5_uewlg"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Script" path="res://scenes/door2.gd" id="6_t8gkr"]
+[ext_resource type="PackedScene" path="res://level_1_win.tscn" id="7_7uic6"]
+>>>>>>> 325879cf0510009381b673e5f151d0a40c5742a0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
 
@@ -190,13 +194,13 @@ shape = SubResource("RectangleShape2D_1okwh")
 [node name="Player 1" parent="." instance=ExtResource("5_6ka54")]
 z_index = 2
 position = Vector2(784, 1585)
-collision_layer = 2
+collision_layer = 3
 collision_mask = 3
 
 [node name="Player 2" parent="." instance=ExtResource("4_ccqy1")]
 z_index = 2
-position = Vector2(1498, 1563)
-collision_layer = 2
+position = Vector2(1499, 1533)
+collision_layer = 3
 collision_mask = 3
 
 [node name="Enemy" parent="." instance=ExtResource("5_whhim")]
@@ -404,7 +408,7 @@ shape = SubResource("RectangleShape2D_1okwh")
 
 [node name="door" type="StaticBody2D" parent="."]
 position = Vector2(562, 518)
-script = ExtResource("5_uewlg")
+script = ExtResource("5_5q5oi")
 
 [node name="Sprite2D" type="Sprite2D" parent="door"]
 modulate = Color(0.368627, 0.219608, 0.0313726, 1)
@@ -430,6 +434,7 @@ texture = SubResource("CanvasTexture_j6aou")
 position = Vector2(27, 106.5)
 shape = SubResource("RectangleShape2D_sdemy")
 
-[node name="U win" parent="." instance=ExtResource("4_b8k03")]
-position = Vector2(1912, 590)
-rotation = 1.5708
+[node name="Level 1 win" parent="." instance=ExtResource("7_7uic6")]
+position = Vector2(1900, 609)
+
+[connection signal="body_entered" from="Level 1 win" to="." method="_on_level_1_win_body_entered"]

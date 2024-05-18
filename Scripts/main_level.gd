@@ -7,10 +7,14 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Global.selection_wizard == 1:
 		Global.selection_wizard = 0
 		$"Player 1".queue_free()
 	if Global.selection_soldier == 1:
 		Global.selection_soldier = 0
 		$"Player 2".queue_free()
+
+
+func _on_level_1_win_body_entered(_body):
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")

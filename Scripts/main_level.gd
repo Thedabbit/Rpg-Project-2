@@ -17,4 +17,4 @@ func _process(_delta):
 
 
 func _on_level_1_win_body_entered(_body):
-	get_tree().change_scene_to_file("res://level_2.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")

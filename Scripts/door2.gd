@@ -7,7 +7,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if Global.enemy_amount == 1:
+func _process(delta):
+	if Global.enemy_amount == 0:
 		$".".queue_free()
-

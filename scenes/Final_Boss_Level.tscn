@@ -1,4 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqfehugn25aw0"]
+[gd_scene load_steps=5 format=3 uid="uid://cqfehugn25aw0"]
+
+[ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="1_ss6w8"]
+[ext_resource type="PackedScene" uid="uid://c5v1vgofwrr07" path="res://scenes/player_2.tscn" id="2_dm7rt"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_poeyn"]
 
@@ -98,3 +101,16 @@ texture = SubResource("CanvasTexture_poeyn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6"]
 position = Vector2(-69.5791, -14.5649)
 shape = SubResource("RectangleShape2D_1uv6x")
+
+[node name="Boss" parent="." instance=ExtResource("1_ss6w8")]
+modulate = Color(0.501358, 0.49759, 1.92523e-07, 1)
+self_modulate = Color(0.0898687, 0.631001, 0.331749, 1)
+position = Vector2(1557, 1067)
+scale = Vector2(3, 3)
+health = 500
+
+[node name="Player 2" parent="." instance=ExtResource("2_dm7rt")]
+z_index = 2
+position = Vector2(239, 387)
+collision_layer = 3
+collision_mask = 3

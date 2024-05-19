@@ -1,3 +1,100 @@
-[gd_scene format=3 uid="uid://cqfehugn25aw0"]
+[gd_scene load_steps=3 format=3 uid="uid://cqfehugn25aw0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_poeyn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uv6x"]
+size = Vector2(161.565, 44.2114)
 
 [node name="FinalBossLevel" type="Node2D"]
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(2898, 1781)
+scale = Vector2(9.32752, 1.64779)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall"]
+modulate = Color(0.498075, 0.478733, 0.478734, 1)
+position = Vector2(-69.6863, -13.958)
+rotation = -3.14159
+scale = Vector2(161.769, 50.476)
+texture = SubResource("CanvasTexture_poeyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-69.5791, -14.5649)
+shape = SubResource("RectangleShape2D_1uv6x")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(1400, 1782)
+scale = Vector2(9.32752, 1.64779)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall2"]
+modulate = Color(0.498075, 0.478733, 0.478734, 1)
+position = Vector2(-69.6863, -13.958)
+rotation = -3.14159
+scale = Vector2(161.769, 50.476)
+texture = SubResource("CanvasTexture_poeyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(-69.5791, -14.5649)
+shape = SubResource("RectangleShape2D_1uv6x")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(18.9999, 1613)
+rotation = 1.5708
+scale = Vector2(9.32752, 1.64779)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall3"]
+modulate = Color(0.498075, 0.478733, 0.478734, 1)
+position = Vector2(-69.6863, -13.958)
+rotation = -3.14159
+scale = Vector2(161.769, 50.476)
+texture = SubResource("CanvasTexture_poeyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+position = Vector2(-69.5791, -14.5649)
+shape = SubResource("RectangleShape2D_1uv6x")
+
+[node name="Wall4" type="StaticBody2D" parent="."]
+position = Vector2(2929, 1613)
+rotation = 1.5708
+scale = Vector2(9.32752, 1.64779)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall4"]
+modulate = Color(0.498075, 0.478733, 0.478734, 1)
+position = Vector2(-69.6863, -13.958)
+rotation = -3.14159
+scale = Vector2(161.769, 50.476)
+texture = SubResource("CanvasTexture_poeyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4"]
+position = Vector2(-69.5791, -14.5649)
+shape = SubResource("RectangleShape2D_1uv6x")
+
+[node name="Wall5" type="StaticBody2D" parent="."]
+position = Vector2(2891, 196)
+scale = Vector2(9.32752, 1.64779)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall5"]
+modulate = Color(0.498075, 0.478733, 0.478734, 1)
+position = Vector2(-69.6863, -13.958)
+rotation = -3.14159
+scale = Vector2(161.769, 50.476)
+texture = SubResource("CanvasTexture_poeyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5"]
+position = Vector2(-69.5791, -14.5649)
+shape = SubResource("RectangleShape2D_1uv6x")
+
+[node name="Wall6" type="StaticBody2D" parent="."]
+position = Vector2(1387, 198)
+scale = Vector2(9.32752, 1.64779)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall6"]
+modulate = Color(0.498075, 0.478733, 0.478734, 1)
+position = Vector2(-69.6863, -13.958)
+rotation = -3.14159
+scale = Vector2(161.769, 50.476)
+texture = SubResource("CanvasTexture_poeyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6"]
+position = Vector2(-69.5791, -14.5649)
+shape = SubResource("RectangleShape2D_1uv6x")

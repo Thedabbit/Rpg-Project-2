@@ -111,11 +111,13 @@ shape = SubResource("RectangleShape2D_lt7td")
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(956, 1454)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy2" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(1348, 417)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy3" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
@@ -123,36 +125,43 @@ visibility_layer = 3
 position = Vector2(2372, 588)
 collision_layer = 2
 collision_mask = 3
+health = 10000
 
 [node name="Enemy4" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(1981, 1299)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy5" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(1570, 1633)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy6" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(1831, 819)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy7" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(1005, 1669)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy8" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(1353, 1638)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy9" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)
 position = Vector2(496, 1441)
 collision_mask = 3
+health = 10000
 
 [node name="Enemy10" parent="." instance=ExtResource("3_mmhpn")]
 modulate = Color(0.839233, 0.198254, 0, 1)

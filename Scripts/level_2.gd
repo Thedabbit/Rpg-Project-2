@@ -11,4 +11,4 @@ func _process(_delta):
 
 
 func _on_level_1_win_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/level_3.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/Final_Boss_Level.tscn") # Replace with function body.

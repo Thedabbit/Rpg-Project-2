@@ -10,7 +10,7 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6n420"]
-size = Vector2(204.495, 44.2114)
+size = Vector2(161.565, 44.2114)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mo1xj"]
 
@@ -85,7 +85,7 @@ scale = Vector2(159.839, 50.476)
 texture = SubResource("CanvasTexture_uv417")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Starting Room wall 1"]
-position = Vector2(-69.9396, -16.1273)
+position = Vector2(-69.9543, -16.1273)
 shape = SubResource("RectangleShape2D_6n420")
 
 [node name="Starting room wall 3" type="StaticBody2D" parent="."]

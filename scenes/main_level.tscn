@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbeoklycx3l8t" path="res://scenes/player_1.tscn" id="5_6ka54"]
 [ext_resource type="PackedScene" uid="uid://cs2ippve8smpi" path="res://scenes/enemy.tscn" id="5_whhim"]
 [ext_resource type="Texture2D" uid="uid://dec8c6hce5pxx" path="res://sprites/image-removebg-preview.png" id="6_5j582"]
-[ext_resource type="PackedScene" uid="uid://cr76hxa7rn27v" path="res://scenes/level_1_win.tscn" id="7_7uic6"]
+[ext_resource type="PackedScene" path="res://scenes/level_1_win.tscn" id="7_7uic6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_uv417"]
 
